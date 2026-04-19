@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav>
+            <h2>
+                Classroom Issue
+            </h2>
+            <div>
+                <a href="index.html">
+                    Report Issue
+                </a>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+                <a href="history.html">
+                    History
+                </a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="card">
+                <h1> Report classroom issue</h1>
+                <form id="Issue form">
+                    <label>Classroom number</label>
+                    <input type="text" id="classroom" placeholder="Enter Classroom number" required />
+                    <label>Issue type</label>
+                     <select id="issueType" required>
+                              <option value="">Select Issue Type</option>
+                              <option value="Projector Issue">Projector Issue</option>
+                              <option value="Computer Issue">Computer Issue</option>
+                              <option value="Internet Issue">Internet Issue</option>
+                              <option value="Audio Issue">Audio Issue</option>
+                              <option value="Power Issue">Power Issue</option>
+                            </select>
+                            <label>Description</label>
+                            <textarea id="Description" placeholder="Describe the issue" required></textarea>
+                            <label>Priority</label>
+                            <select id="Priority" required>
+                                <option value="">Select priority</option>
+                                <option value="LOW">LOW</option>
+                                <option value="MEDIUM">MEDIUM</option>
+                                <option value="HIGH">HIGH</option>
+                            </select>
+                            <button type="submit">Submit Issue</button>
+                </form>
+            </div>           
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="loadIssues()">
+  <nav>
+    <h2>Smart Classroom Issue Reporter</h2>
+    <div>
+      <a href="index.html">Report Issue</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="history.html">History</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>IT Staff Dashboard</h1>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3 id="totalCount">0</h3>
+        <p>Total Issues</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="pendingCount">0</h3>
+        <p>Pending</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="resolvedCount">0</h3>
+        <p>Resolved</p>
+      </div>
+    </div>
+
+    <input type="text" id="searchInput" placeholder="Search by classroom..." onkeyup="loadIssues()" />
+
+    <div class="filter-buttons">
+      <button onclick="setFilter('All')">All</button>
+      <button onclick="setFilter('Pending')">Pending</button>
+      <button onclick="setFilter('In Progress')">In Progress</button>
+      <button onclick="setFilter('Resolved')">Resolved</button>
+    </div>
+
+    <div id="issueList" class="issue-grid"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
